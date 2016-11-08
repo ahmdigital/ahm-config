@@ -4,7 +4,7 @@ const config = require('../lib');
 describe('ahm-config', () => {
   process.env.NODE_ENV = 'staging';
   process.env.NODE_CONFIG_DIR = `${__dirname}/data`;
-  process.env.NODE_CONFIG_FILE = `${__dirname}/data/config.override.json`;
+  process.env.NODE_CONFIG_FILE = `${__dirname}/data/override.config.json`;
   process.env.e = 55555;
 
   it('should return proper config values from hierarchy', () => {
