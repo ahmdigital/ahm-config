@@ -1,5 +1,5 @@
 const assert = require('assert');
-const config = require('../');
+const config = require('../lib');
 
 describe('ahm-config', () => {
   process.env.NODE_ENV = 'staging';
@@ -12,7 +12,7 @@ describe('ahm-config', () => {
     assert.equal(store.get('a'), 1, 'Value should be taken from default config');
     assert.equal(store.get('b'), 22, 'Value should be taken from staging config');
     assert.equal(store.get('c'), 333, 'Value should be taken from custom config');
-    assert.equal(store.get('d'), 4444, 'Value should be taken from .env file');
+    assert.equal(store.get('d'), 444, 'Value should NOT be taken from .env file');
     assert.equal(store.get('e'), 55555, 'Value should be taken from env variables');
   });
 
