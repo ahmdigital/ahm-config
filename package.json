@@ -19,6 +19,7 @@
     "release": "scripts/release"
   },
   "dependencies": {
+    "is-my-json-valid": "^2.15.0",
     "nconf": "^0.8.4"
   },
   "devDependencies": {

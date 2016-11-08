@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "NODE_ENV": { "required": true, "type": "string" },
+    "PORT": { "required": true, "type": "integer", "minimum": 1 },
+    "a": { "required": true, "type": "integer", "minimum": 1 },
+    "b": { "required": true, "type": "integer", "minimum": 1 },
+    "c": { "required": true, "type": "integer", "minimum": 1 },
+    "d": { "required": true, "type": "integer", "minimum": 1 },
+    "e": { "required": true, "type": "integer", "minimum": 1 },
+    "f": {
+      "type": "object",
+      "properties": {
+        "foo": {
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  },
+  "required": true,
+  "additionalProperties": false
+}
