@@ -32,7 +32,7 @@ There're several options that `config.make` takes:
 Configuration is loaded in the following order: 
 
 1. Environment variables (process.env) with `__` as the separator.
-2. *Local* config (usually not checked in to version controll).
+2. *Local* config (usually not checked in to version control).
 3. Environment specific config `<env>.config.json`.
 4. *Default* config.
 5. System defaults.
