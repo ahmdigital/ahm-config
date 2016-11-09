@@ -6,7 +6,7 @@ describe('ahm-config: type-casting', () => {
 
   before(() => {
     process.env.a = '2';
-    process.env.b = 'true';
+    process.env.b = 'false';
     process.env.c = '3.45';
     process.env.d__e__f = '6.7';
   });
@@ -22,7 +22,7 @@ describe('ahm-config: type-casting', () => {
       assert.equal(err.message, "Config error: data.a is the wrong type. Value '2' should be integer.");
       assert.deepEqual(err.meta, [
         { field: 'data.a', message: 'is the wrong type', value: '2', type: 'integer' },
-        { field: 'data.b', message: 'is the wrong type', value: 'true', type: 'boolean' },
+        { field: 'data.b', message: 'is the wrong type', value: 'false', type: 'boolean' },
         { field: 'data.c', message: 'is the wrong type', value: '3.45', type: 'number' },
         { field: 'data.d.e.f', message: 'is the wrong type', value: '6.7', type: 'number' },
       ]);
@@ -36,7 +36,7 @@ describe('ahm-config: type-casting', () => {
     const store = config.make({ path, normalise: true, onError });
 
     assert.strictEqual(store.get('a'), 2);
-    assert.strictEqual(store.get('b'), true);
+    assert.strictEqual(store.get('b'), false);
     assert.strictEqual(store.get('c'), 3.45);
     assert.strictEqual(store.get('d:e:f'), 6.7);
   });
