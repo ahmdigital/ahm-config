@@ -18,22 +18,22 @@ describe('ahm-config: type-casting', () => {
   });
 
   it('should return schema errors when normalise disabled', (done) => {
-    config.make({ path, normalise: false, onError: (err) => {
+    const onError = (err) => {
       assert.equal(err.message, "Config error: data.a is the wrong type. Value '2' should be integer.");
       assert.deepEqual(err.meta, [
         { field: 'data.a', message: 'is the wrong type', value: '2', type: 'integer' },
         { field: 'data.b', message: 'is the wrong type', value: 'true', type: 'boolean' },
-        { field: 'data.c', message: 'is the wrong type',  value: '3.45', type: 'number' },
+        { field: 'data.c', message: 'is the wrong type', value: '3.45', type: 'number' },
         { field: 'data.d.e.f', message: 'is the wrong type', value: '6.7', type: 'number' },
       ]);
       done();
-    }});
+    };
+    config.make({ path, normalise: false, onError });
   });
 
   it('should type cast string literals to appropriate types', () => {
-    const store = config.make({ path, normalise: true, onError: (err) => {
-      throw new Error('It should not happen');
-    }});
+    const onError = () => { throw new Error('It should not happen'); };
+    const store = config.make({ path, normalise: true, onError });
 
     assert.strictEqual(store.get('a'), 2);
     assert.strictEqual(store.get('b'), true);
