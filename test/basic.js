@@ -1,13 +1,25 @@
 const assert = require('assert');
 const config = require('../lib');
 
-describe('ahm-config', () => {
-  process.env.NODE_ENV = 'staging';
-  process.env.NODE_CONFIG_DIR = `${__dirname}/data`;
-  process.env.NODE_CONFIG_FILE = `${__dirname}/data/override.config.json`;
-  process.env.e = 55555;
-  process.env.g = 666666;
-  process.env.f__baz = 'Should not be shared';
+describe('ahm-config: basic', () => {
+  before(() => {
+    process.env.NODE_ENV = 'staging';
+    process.env.NODE_CONFIG_DIR = `${__dirname}/basic`;
+    process.env.NODE_CONFIG_FILE = `${__dirname}/basic/override.config.json`;
+    process.env.e = 55555;
+    process.env.g = 666666;
+    process.env.f__baz = 'Should not be shared';
+  });
+
+  after(() => {
+    delete process.env.NODE_ENV;
+    delete process.env.NODE_CONFIG_DIR;
+    delete process.env.NODE_CONFIG_FILE;
+    delete process.env.e;
+    delete process.env.g;
+    delete process.env.f__baz;
+  });
+
 
   it('should return proper config values from hierarchy', () => {
     const store = config.make();
