@@ -40,12 +40,6 @@ describe('ahm-config: basic', () => {
     assert.equal(storeB.get('foo'), 'baz');
   });
 
-  it('should set defaults', () => {
-    const store = config.make();
-    assert.equal(store.get('NODE_ENV'), 'staging'); // overriden above
-    assert.equal(store.get('PORT'), 3000);
-  });
-
   it('should suport schema matching and environment variables isolation', () => {
     const store = config.make();
     assert.equal(store.get('a'), 1);
