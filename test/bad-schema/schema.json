@@ -6,7 +6,18 @@
       "type": "object",
       "patternProperties": {
         ".*": {
-          "type": "integer"
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "integer"
+            },
+            "prop1": {
+              "type": "integer"
+            },
+            "prop2": {
+              "type": "integer"
+            }
+          }
         }
       }
     },

@@ -10,12 +10,12 @@ describe('ahm-config: bad-schema', () => {
         err.message,
         'Config error: undefined is not of a type(s) integer. Value \'undefined\' should be undefined.');
       assert.deepEqual(err.meta, [{
-        property: 'instance.multyKeyProp.prop1',
+        property: 'instance.multyKeyProp.data.prop1',
         message: 'is not of a type(s) integer',
         schema: { type: 'integer' },
         instance: 'asd',
         name: 'type',
-        stack: 'instance.multyKeyProp.prop1 is not of a type(s) integer',
+        stack: 'instance.multyKeyProp.data.prop1 is not of a type(s) integer',
         argument: ['integer'],
       },
       {
@@ -38,12 +38,12 @@ describe('ahm-config: bad-schema', () => {
   it('should return schema errors when normalise enabled', (done) => {
     const onError = (err) => {
       assert.deepEqual(err.meta, [{
-        property: 'instance.multyKeyProp.prop1',
+        property: 'instance.multyKeyProp.data.prop1',
         message: 'is not of a type(s) integer',
         schema: { type: 'integer' },
         name: 'type',
         argument: ['integer'],
-        stack: 'instance.multyKeyProp.prop1 is not of a type(s) integer',
+        stack: 'instance.multyKeyProp.data.prop1 is not of a type(s) integer',
       },
       {
         property: 'instance./a',

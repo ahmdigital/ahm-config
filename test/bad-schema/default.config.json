@@ -1,7 +1,9 @@
 {
   "multyKeyProp": {
-    "prop1": "asd",
-    "prop2": 1234
+    "data": {
+      "prop1": "asd",
+      "prop2": 1234
+    }
   },
   "/a": 1,
   "$x": "test"

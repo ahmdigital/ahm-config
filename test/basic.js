@@ -1,5 +1,7 @@
 const assert = require('assert');
 const config = require('../lib');
+const schema = require('../lib/schema');
+const defaultSchema = require('./bad-schema/schema.json');
 
 describe('ahm-config: basic', () => {
   before(() => {
@@ -19,6 +21,18 @@ describe('ahm-config: basic', () => {
     delete process.env.e;
     delete process.env.g;
     delete process.env.f__baz;
+  });
+
+  describe('match()', () => {
+    it('should contain all patternProperties', () => {
+      const pattern = schema.match(defaultSchema);
+      assert(pattern.test('multyKeyProp__test__a'));
+      assert(pattern.test('multyKeyProp__test2__a'));
+      assert(pattern.test('multyKeyProp__test__prop1'));
+      assert(pattern.test('multyKeyProp__test2__prop1'));
+      assert.equal(pattern.test('multyKeyProp__test__prop11'), false);
+      assert.equal(pattern.test('multyKeyProp__test2__prop11'), false);
+    });
   });
 
 

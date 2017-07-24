@@ -65,7 +65,6 @@ describe('ahm-config: type-casting', () => {
   it('should type cast string literals to appropriate types', () => {
     const onError = () => { throw new Error('It should not happen'); };
     const store = config.make({ path, normalise: true, onError });
-
     assert.strictEqual(store.get('a'), 2);
     assert.strictEqual(store.get('b'), false);
     assert.strictEqual(store.get('c'), 3.45);
