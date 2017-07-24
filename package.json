@@ -19,7 +19,7 @@
     "release": "scripts/release"
   },
   "dependencies": {
-    "is-my-json-valid": "^2.15.0",
+    "jsonschema": "^1.1.1",
     "lodash": "^4.16.6",
     "nconf": "^0.8.4",
     "traverse": "^0.6.6"
