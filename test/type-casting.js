@@ -19,7 +19,8 @@ describe('ahm-config: type-casting', () => {
 
   it('should return schema errors when normalise disabled', (done) => {
     const onError = (err) => {
-      assert.equal(err.message, "Config error: undefined is not of a type(s) integer. Value 'undefined' should be undefined.");
+      assert.equal(err.message, 'Config error: undefined is not of a type(s) integer. ' +
+        'Value \'undefined\' should be undefined.');
       assert.deepEqual(err.meta, [{
         property: 'instance.a',
         message: 'is not of a type(s) integer',
