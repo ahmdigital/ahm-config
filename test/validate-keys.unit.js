@@ -10,7 +10,6 @@ describe('ahm-config: validate-keys', () => {
       message: 'Has special characters in it (/^[a-z0-9_-]+$/i are allowed)',
       instance: 'a./test',
       name: 'key',
-      argument: [/^[a-z0-9_-]+$/i],
     }]);
   });
 });

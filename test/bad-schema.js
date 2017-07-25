@@ -15,22 +15,20 @@ describe('ahm-config: bad-schema', () => {
         schema: { type: 'integer' },
         instance: 'asd',
         name: 'type',
-        argument: ['integer'],
         stack: 'instance.multyKeyProp.prop1 is not of a type(s) integer',
+        argument: ['integer'],
       },
       {
         property: 'instance./a',
         message: 'Has special characters in it (/^[a-z0-9_-]+$/i are allowed)',
         instance: '/a',
         name: 'key',
-        argument: [/^[a-z0-9_-]+$/i],
       },
       {
         property: 'instance.$x',
         message: 'Has special characters in it (/^[a-z0-9_-]+$/i are allowed)',
         instance: '$x',
         name: 'key',
-        argument: [/^[a-z0-9_-]+$/i],
       }]);
       done();
     };
@@ -52,14 +50,12 @@ describe('ahm-config: bad-schema', () => {
         message: 'Has special characters in it (/^[a-z0-9_-]+$/i are allowed)',
         instance: '/a',
         name: 'key',
-        argument: [/^[a-z0-9_-]+$/i],
       },
       {
         property: 'instance.$x',
         message: 'Has special characters in it (/^[a-z0-9_-]+$/i are allowed)',
         instance: '$x',
         name: 'key',
-        argument: [/^[a-z0-9_-]+$/i],
       }]);
       done();
     };
