@@ -25,12 +25,12 @@
     "traverse": "^0.6.6"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.3.0",
-    "eslint-plugin-jsdoc": "^3.1.0",
-    "gint": "^0.6.0",
-    "mocha": "^3.4.2"
+    "eslint": "3.19.0",
+    "eslint-config-airbnb-base": "11.2.0",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-jsdoc": "3.1.0",
+    "gint": "0.6.0",
+    "mocha": "3.4.2"
   },
   "engines": {
     "node": "^7.6 || ^8.4"
