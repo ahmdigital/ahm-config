@@ -1,6 +1,7 @@
 # ahm-config
 
-Config management module. It uses [nconf](https://github.com/indexzero/nconf) under the bonnet to manage config files, environment variables as a single system. It aims to simplify system configuration and config management.
+Config management module. It uses [nconf](https://github.com/indexzero/nconf) under the bonnet to manage config files, environment variables as a single system. It aims to simplify system configuration and config management. It also offers
+means of config validation and normalization using json schema.
 
 
 ### Installation
@@ -17,7 +18,7 @@ const config = require('@ahmdigital/config');
 module.exports = config.make({ path: `${__dirname}/..` });
 ```
 
-### Options 
+### Options
 
 There're several options that `config.make` takes:
 
@@ -30,7 +31,7 @@ There're several options that `config.make` takes:
 
 #### Load order
 
-Configuration is loaded in the following order: 
+Configuration is loaded in the following order:
 
 1. Environment variables (process.env) with `__` as the separator.
 2. *Local* config (usually not checked in to version control).
@@ -51,5 +52,5 @@ Configuration is loaded in the following order:
 
  - Use hierarchical configs where possible
  - Use json types where it makes sense, avoid type casting later on in your consumer code
- - Keep devops specific config values (like elasticache hostname) in ansible config
- - Keep sensitive values in ansible or consider config encryption - [nconf can do it](https://github.com/indexzero/nconf#encrypting-file-contents)
+ - Keep devops specific config values (like elasticache hostname) in infrastructure config
+ - Keep sensitive values in infrastructure config or/and consider config encryption - [nconf can do it](https://github.com/indexzero/nconf#encrypting-file-contents)
