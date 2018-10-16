@@ -1,0 +1,13 @@
+{
+  "api": {
+    "url": "http://localhost:4000"
+  },
+  "maintenance": {
+    "enabled": false,
+    "message": "We’ll be back up and running soon."
+  },
+  "server": {
+    "host": "localhost",
+    "port": 3000
+  }
+}

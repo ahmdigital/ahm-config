@@ -29,6 +29,8 @@ There're several options that `config.make` takes:
 - `path` string - Directory to look for json configs.
 - `schema` string - Path to *json schema* file (default `dir/schema.json`).
 
+See [Example](https://github.com/ahmdigital/ahm-config/tree/master/example).
+
 #### Load order
 
 Configuration is loaded in the following order:

@@ -3,7 +3,7 @@
   "plugins": ["jsdoc"],
   "env": {
     "node": true,
-    "mocha": true,
+    "mocha": true
   },
   "globals": {},
   "rules": {
@@ -23,6 +23,6 @@
     "jsdoc/require-returns-description": "error",
     "jsdoc/require-returns-type": "error",
     "consistent-return": 2,
-    "max-len": [2, 120],
-  },
+    "max-len": [2, 120]
+  }
 }
