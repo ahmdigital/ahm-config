@@ -10,7 +10,7 @@ Read main readme file to understand more about options loading order. Basically,
 
 Follow those steps:
 
-1. Try those commads to see different behaviour:
+1. Try those commands to see different behaviour:
 
 ```shell
 # Uses "default" config
