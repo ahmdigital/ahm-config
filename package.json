@@ -32,6 +32,11 @@
     "gint": "0.6.0",
     "mocha": "3.4.2"
   },
+  "renovate": {
+    "extends": [
+      "@ahmdigital"
+    ]
+  },
   "engines": {
     "node": ">=8"
   }
