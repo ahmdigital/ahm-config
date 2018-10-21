@@ -1,6 +1,6 @@
 {
   "name": "@ahmdigital/config",
-  "version": "7.1.2",
+  "version": "7.2.0",
   "description": "",
   "author": "ahm",
   "license": "UNLICENSED",
@@ -31,6 +31,11 @@
     "eslint-plugin-jsdoc": "3.8.0",
     "gint": "0.6.0",
     "mocha": "^5.2.0"
+  },
+  "renovate": {
+    "extends": [
+      "@ahmdigital"
+    ]
   },
   "engines": {
     "node": ">=8"

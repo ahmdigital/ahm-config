@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "NODE_ENV": {
+      "type": "string"
+    },
+    "api": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "url"
+        }
+      },
+      "required": ["url"],
+      "additionalProperties": false
+    },
+    "maintenance": {
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "server": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "type": "string"
+        },
+        "port": {
+          "type": "integer"
+        }
+      },
+      "required": ["host", "port"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["NODE_ENV", "api", "maintenance", "server"],
+  "additionalProperties": false
+}
