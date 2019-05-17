@@ -33,7 +33,7 @@ See [Example](https://github.com/ahmdigital/ahm-config/tree/master/example).
 
 #### Load order
 
-Configuration is loaded in the following order:
+Configuration is loaded with the following priority:
 
 1. Environment variables (process.env) with `__` as the separator.
 2. *Local* config (usually not checked in to version control).
