@@ -28,7 +28,7 @@
     "eslint": "5.7.0",
     "eslint-config-airbnb-base": "11.2.0",
     "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-jsdoc": "3.9.1",
+    "eslint-plugin-jsdoc": "7.2.3",
     "gint": "0.6.0",
     "mocha": "5.2.0"
   },
