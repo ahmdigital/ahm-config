@@ -30,7 +30,7 @@
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsdoc": "7.2.3",
     "gint": "0.9.2",
-    "mocha": "5.2.0"
+    "mocha": "6.2.2"
   },
   "renovate": {
     "extends": [
