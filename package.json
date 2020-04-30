@@ -16,13 +16,16 @@
   "scripts": {
     "test": "mocha -R spec --recursive",
     "lint": "eslint -c .eslintrc .",
-    "release": "scripts/release"
+    "release": "scripts/release",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "jsonschema": "^1.2.5",
     "lodash": "^4.17.15",
     "nconf": "^0.8.4",
-    "traverse": "^0.6.6"
+    "traverse": "^0.6.6",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "eslint": "5.16.0",
@@ -39,5 +42,6 @@
   },
   "engines": {
     "node": "10.6.3"
-  }
+  },
+  "snyk": true
 }
