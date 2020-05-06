@@ -4,7 +4,7 @@
   - service: build-service
     command: npm run lint
   - service: build-service
-    command: npm run test --nowatch
+    command: npm run test -- --coverage
 
 - name: Reinstate SSH Private Key File
   service: build-service
