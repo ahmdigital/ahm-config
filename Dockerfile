@@ -15,7 +15,7 @@ COPY package.json /root
 COPY package-lock.json /root
 COPY test /root/test
 COPY lib /root/lib
-COPY .git /.git
+COPY .git /root/.git
 
 # Install as public random person
 RUN npm i --quiet
