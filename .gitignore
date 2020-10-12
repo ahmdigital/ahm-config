@@ -10,3 +10,5 @@ Thumbs.db
 *.swn
 *.decrypted
 *.aes
+codeship_deploy_key*
+codeship.env

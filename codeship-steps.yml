@@ -1,32 +1,11 @@
 - name: Lint & Test
   type: parallel
+  service: build-service
   steps:
-  - service: build-service
-    command: npm run lint
-  - service: build-service
-    command: npm run test -- --coverage
-
-- name: Reinstate SSH Private Key File
-  service: build-service
-  tag: master
-  command: /bin/bash -c "echo -e $PRIVATE_SSH_KEY >> /root/.ssh/id_rsa"
-
-- name: Chmod id_rsa
-  service: build-service
-  tag: master
-  command: chmod 600 /root/.ssh/id_rsa
-
-- name: Add server to list of known hosts
-  service: build-service
-  tag: master
-  command: /bin/bash -c "ssh-keyscan -H github.com >> /root/.ssh/known_hosts"
-
-- name: Confirm ssh connection to server, authenticating with generated public ssh key
-  service: build-service
-  tag: master
-  command: /bin/bash -c "ssh -o StrictHostKeyChecking=no -Tvv git@github.com 2>&1 | grep 'successfully authenticated'"
-
-- name: Run DevOps release scripts
+  - command: npm run lint
+  - command: npm run test -- --coverage
+    
+- name: Authenticate and release
   tag: master
   service: build-service
-  command: npx -p @ahmdigital/devops release
+  command: /bin/bash -c "echo //registry.npmjs.org/:_authToken=$NPM_TOKEN_AHM > ~/.npmrc && npx -p @ahmdigital/devops authenticate_and_release && rm -f ~/.npmrc"
