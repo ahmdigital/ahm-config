@@ -30,7 +30,7 @@
       "type": "integer",
       "minimum": 1
     },
-    "$x": {
+    "%x": {
       "required": true,
       "type": "string",
       "minimum": 1
