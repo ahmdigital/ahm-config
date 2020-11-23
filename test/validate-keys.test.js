@@ -7,7 +7,7 @@ describe('ahm-config: validate-keys', () => {
     expect(validateKeys(data)).toEqual([
       {
         instance: 'a./test',
-        message: 'Has special characters in it (/^[a-z0-9_\\-\\$]+$/i are allowed)',
+        message: 'Has special characters in it (/^[a-z0-9_\\-$]+$/i are allowed)',
         name: 'key',
         property: 'instance.a./test',
       },

@@ -21,13 +21,13 @@ describe('ahm-config: bad-schema', () => {
           },
           {
             instance: '/a',
-            message: 'Has special characters in it (/^[a-z0-9_\\-\\$]+$/i are allowed)',
+            message: 'Has special characters in it (/^[a-z0-9_\\-$]+$/i are allowed)',
             name: 'key',
             property: 'instance./a',
           },
           {
             instance: '%x',
-            message: 'Has special characters in it (/^[a-z0-9_\\-\\$]+$/i are allowed)',
+            message: 'Has special characters in it (/^[a-z0-9_\\-$]+$/i are allowed)',
             name: 'key',
             property: 'instance.%x',
           },
@@ -51,13 +51,13 @@ describe('ahm-config: bad-schema', () => {
           },
           {
             instance: '/a',
-            message: 'Has special characters in it (/^[a-z0-9_\\-\\$]+$/i are allowed)',
+            message: 'Has special characters in it (/^[a-z0-9_\\-$]+$/i are allowed)',
             name: 'key',
             property: 'instance./a',
           },
           {
             instance: '%x',
-            message: 'Has special characters in it (/^[a-z0-9_\\-\\$]+$/i are allowed)',
+            message: 'Has special characters in it (/^[a-z0-9_\\-$]+$/i are allowed)',
             name: 'key',
             property: 'instance.%x',
           },
