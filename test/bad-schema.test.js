@@ -9,7 +9,7 @@ describe('ahm-config: bad-schema', () => {
         expect(err.message).toEqual(
           "Config error: undefined is not of a type(s) integer. Value 'undefined' should be undefined.",
         );
-        expect(err.meta).toMatchSnapshot()
+        expect(err.meta).toMatchSnapshot();
         done();
       };
       config.make({ path, normalise: false, onError });
@@ -18,7 +18,7 @@ describe('ahm-config: bad-schema', () => {
   it('should return schema errors when normalise enabled', () =>
     new Promise((done) => {
       const onError = (err) => {
-        expect(err.meta).toMatchSnapshot()
+        expect(err.meta).toMatchSnapshot();
         done();
       };
       config.make({ path, normalise: true, onError });
