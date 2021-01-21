@@ -22,44 +22,7 @@ describe('ahm-config: type-casting', () => {
         expect(err.message).toEqual(
           "Config error: undefined is not of a type(s) integer. Value 'undefined' should be undefined.",
         );
-        expect(err.meta).toEqual([
-          {
-            argument: ['integer'],
-            instance: '2',
-            message: 'is not of a type(s) integer',
-            name: 'type',
-            property: 'instance.a',
-            schema: { required: true, type: 'integer' },
-            stack: 'instance.a is not of a type(s) integer',
-          },
-          {
-            argument: ['boolean'],
-            instance: 'false',
-            message: 'is not of a type(s) boolean',
-            name: 'type',
-            property: 'instance.b',
-            schema: { required: true, type: 'boolean' },
-            stack: 'instance.b is not of a type(s) boolean',
-          },
-          {
-            argument: ['number'],
-            instance: '3.45',
-            message: 'is not of a type(s) number',
-            name: 'type',
-            property: 'instance.c',
-            schema: { required: true, type: 'number' },
-            stack: 'instance.c is not of a type(s) number',
-          },
-          {
-            argument: ['number'],
-            instance: '6.7',
-            message: 'is not of a type(s) number',
-            name: 'type',
-            property: 'instance.d.e.f',
-            schema: { required: true, type: 'number' },
-            stack: 'instance.d.e.f is not of a type(s) number',
-          },
-        ]);
+        expect(err.meta).toMatchSnapshot()
         done();
       };
       config.make({ path, normalise: false, onError });

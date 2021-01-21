@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ahm-config: type-casting should return schema errors when normalise disabled 1`] = `
+Array [
+  ValidationError {
+    "argument": Array [
+      "integer",
+    ],
+    "instance": "2",
+    "message": "is not of a type(s) integer",
+    "name": "type",
+    "path": Array [
+      "a",
+    ],
+    "property": "instance.a",
+    "schema": Object {
+      "required": true,
+      "type": "integer",
+    },
+    "stack": "instance.a is not of a type(s) integer",
+  },
+  ValidationError {
+    "argument": Array [
+      "boolean",
+    ],
+    "instance": "false",
+    "message": "is not of a type(s) boolean",
+    "name": "type",
+    "path": Array [
+      "b",
+    ],
+    "property": "instance.b",
+    "schema": Object {
+      "required": true,
+      "type": "boolean",
+    },
+    "stack": "instance.b is not of a type(s) boolean",
+  },
+  ValidationError {
+    "argument": Array [
+      "number",
+    ],
+    "instance": "3.45",
+    "message": "is not of a type(s) number",
+    "name": "type",
+    "path": Array [
+      "c",
+    ],
+    "property": "instance.c",
+    "schema": Object {
+      "required": true,
+      "type": "number",
+    },
+    "stack": "instance.c is not of a type(s) number",
+  },
+  ValidationError {
+    "argument": Array [
+      "number",
+    ],
+    "instance": "6.7",
+    "message": "is not of a type(s) number",
+    "name": "type",
+    "path": Array [
+      "d",
+      "e",
+      "f",
+    ],
+    "property": "instance.d.e.f",
+    "schema": Object {
+      "required": true,
+      "type": "number",
+    },
+    "stack": "instance.d.e.f is not of a type(s) number",
+  },
+]
+`;

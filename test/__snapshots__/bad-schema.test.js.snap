@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ahm-config: bad-schema should return schema errors when normalise disabled 1`] = `
+Array [
+  ValidationError {
+    "argument": Array [
+      "integer",
+    ],
+    "instance": "asd",
+    "message": "is not of a type(s) integer",
+    "name": "type",
+    "path": Array [
+      "multyKeyProp",
+      "data",
+      "prop1",
+    ],
+    "property": "instance.multyKeyProp.data.prop1",
+    "schema": Object {
+      "type": "integer",
+    },
+    "stack": "instance.multyKeyProp.data.prop1 is not of a type(s) integer",
+  },
+  Object {
+    "instance": "/a",
+    "message": "Has special characters in it (/^[a-z0-9_\\\\-$]+$/i are allowed)",
+    "name": "key",
+    "property": "instance./a",
+  },
+  Object {
+    "instance": "%x",
+    "message": "Has special characters in it (/^[a-z0-9_\\\\-$]+$/i are allowed)",
+    "name": "key",
+    "property": "instance.%x",
+  },
+]
+`;
+
+exports[`ahm-config: bad-schema should return schema errors when normalise enabled 1`] = `
+Array [
+  ValidationError {
+    "argument": Array [
+      "integer",
+    ],
+    "instance": NaN,
+    "message": "is not of a type(s) integer",
+    "name": "type",
+    "path": Array [
+      "multyKeyProp",
+      "data",
+      "prop1",
+    ],
+    "property": "instance.multyKeyProp.data.prop1",
+    "schema": Object {
+      "type": "integer",
+    },
+    "stack": "instance.multyKeyProp.data.prop1 is not of a type(s) integer",
+  },
+  Object {
+    "instance": "/a",
+    "message": "Has special characters in it (/^[a-z0-9_\\\\-$]+$/i are allowed)",
+    "name": "key",
+    "property": "instance./a",
+  },
+  Object {
+    "instance": "%x",
+    "message": "Has special characters in it (/^[a-z0-9_\\\\-$]+$/i are allowed)",
+    "name": "key",
+    "property": "instance.%x",
+  },
+]
+`;
