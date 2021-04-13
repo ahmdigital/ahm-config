@@ -25,7 +25,7 @@
     "traverse": "^0.6.6"
   },
   "devDependencies": {
-    "@ahmdigital/eslint-config": "4.0.24",
+    "@ahmdigital/eslint-config": "4.0.25",
     "gint": "0.9.2",
     "jest": "26.6.3"
   },
