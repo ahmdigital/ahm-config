@@ -25,14 +25,14 @@ describe('ahm-config: type-casting', () => {
         expect(err.meta).toMatchSnapshot();
         done();
       };
-      config.make({ path, normalise: false, onError });
+      config.make({ normalise: false, onError, path });
     }));
 
   it('should type cast string literals to appropriate types', () => {
     const onError = () => {
       throw new Error('It should not happen');
     };
-    const store = config.make({ path, normalise: true, onError });
+    const store = config.make({ normalise: true, onError, path });
     expect(store.get('a')).toBe(2);
     expect(store.get('b')).toBe(false);
     expect(store.get('c')).toBe(3.45);

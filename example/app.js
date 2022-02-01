@@ -1,7 +1,7 @@
 /* eslint-disable no-console, import/no-unresolved */
 const config = require('@ahmdigital/config').make({
-  path: `${__dirname}/config`,
   normalize: true,
+  path: `${__dirname}/config`,
 });
 
 console.log('Whole config:');

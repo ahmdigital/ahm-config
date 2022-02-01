@@ -12,7 +12,7 @@ describe('ahm-config: bad-schema', () => {
         expect(err.meta).toMatchSnapshot();
         done();
       };
-      config.make({ path, normalise: false, onError });
+      config.make({ normalise: false, onError, path });
     }));
 
   it('should return schema errors when normalise enabled', () =>
@@ -21,6 +21,6 @@ describe('ahm-config: bad-schema', () => {
         expect(err.meta).toMatchSnapshot();
         done();
       };
-      config.make({ path, normalise: true, onError });
+      config.make({ normalise: true, onError, path });
     }));
 });
