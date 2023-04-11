@@ -1,4 +1,4 @@
-FROM node:14
+FROM public.ecr.aws/docker/library/node:18.15.0
 
 WORKDIR /root/app/
 
