@@ -1,4 +1,4 @@
-FROM public.ecr.aws/docker/library/node:18.15.0
+FROM public.ecr.aws/docker/library/node:18
 
 WORKDIR /root/app/
 
@@ -7,8 +7,6 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update \
     && apt-get install -y jq
-
-RUN npm i -g npm@latest
 
 COPY package.json package-lock.json ./
 
